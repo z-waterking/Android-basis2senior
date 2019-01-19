@@ -92,12 +92,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         // TODO Auto-generated method stub
-                        if(progress < 100)
-                        {
+                        if (progress < 100) {
                             handler.sendEmptyMessage(0x123);
-                        }
-                        else
-                        {
+                        } else {
                             //隐藏
                             pb.setVisibility(View.INVISIBLE);
                             pt.setVisibility(View.INVISIBLE);
@@ -123,26 +120,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //取得输入问题，分情况判断
                 String question = questionText.getText().toString();
-                if(question == "")
-                {
+                if (question == "") {
                     chatText.setText("请输入问题");
+                    return;
                 }
                 if(caculateRadio.isChecked())
                 {
                     try{
                         double result = evaluate(question);
                         chatText.setText("你需要计算的结果为" + Double.toString(result));
-                    }catch(Exception e){
+                    } catch (Exception e) {
                         chatText.setText("你输入的表达式不对哦，请检查");
                     }
 
-                }
-                else if(questionRadio.isChecked())
-                {
+                } else if (questionRadio.isChecked()) {
                     chatText.setText("此功能待完善");
-                }
-                else
-                {
+                } else {
                     chatText.setText("请先选中你想向我提问的问题类型哦。");
                 }
             }
@@ -182,39 +175,37 @@ public class MainActivity extends AppCompatActivity {
                 }
                 i--; // 回退一位
                 stackOfNum.push(Float.parseFloat(sbuf.toString()));
-            }
-
-            else if (tokens[i] == '(')
+            } else if (tokens[i] == '(') {
                 stackOfOps.push(tokens[i]);
-
-            else if (tokens[i] == ')') {
-                while (stackOfOps.peek() != '(')
+            } else if (tokens[i] == ')') {
+                while (stackOfOps.peek() != '('){
                     stackOfNum.push(caculate(stackOfOps.pop(), stackOfNum.pop(), stackOfNum.pop()));
+                }
                 stackOfOps.pop();
-            }
-
-            else if (tokens[i] == '+' || tokens[i] == '-' || tokens[i] == '*' || tokens[i] == '/') {
-
-                while (!stackOfOps.empty() && hasPrecedence(tokens[i], stackOfOps.peek()))
+            } else if (tokens[i] == '+' || tokens[i] == '-' || tokens[i] == '*' || tokens[i] == '/') {
+                while (!stackOfOps.empty() && hasPrecedence(tokens[i], stackOfOps.peek())){
                     stackOfNum.push(caculate(stackOfOps.pop(), stackOfNum.pop(), stackOfNum.pop()));
-
+                }
                 stackOfOps.push(tokens[i]);
             }
         }
 
-        while (!stackOfOps.empty())
+        while (!stackOfOps.empty()){
             stackOfNum.push(caculate(stackOfOps.pop(), stackOfNum.pop(), stackOfNum.pop()));
+        }
 
         return stackOfNum.pop();
     }
 
     public static boolean hasPrecedence(char op1, char op2) {
-        if (op2 == '(' || op2 == ')')
+        if (op2 == '(' || op2 == ')'){
             return false;
-        if ((op1 == '*' || op1 == '/') && (op2 == '+' || op2 == '-'))
+        }
+        if ((op1 == '*' || op1 == '/') && (op2 == '+' || op2 == '-')) {
             return false;
-        else
+        } else {
             return true;
+        }
     }
 
     public static float caculate(char op, float b, float a) {
