@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <chapter.android.aweme.ss.com.homework.widget.CircleImageView
+        android:id="@+id/circle_view"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+    <Button
+        android:id="@+id/btn_exercises1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exercises1"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_exercises2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exercises2"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_exercises3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exercises3"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

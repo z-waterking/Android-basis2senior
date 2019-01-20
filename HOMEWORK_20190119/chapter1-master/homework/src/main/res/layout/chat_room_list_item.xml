@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingTop="12dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp">
+
+        <!--放在默认位置-->
+    <chapter.android.aweme.ss.com.homework.widget.CircleImageView
+        android:id="@+id/iv_avatar_left"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_girl"
+        android:visibility="invisible"/>
+
+    <!-- toRightOf 在X的右边-->
+    <LinearLayout
+        android:id="@+id/chat_box_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_avatar_left"
+        android:visibility="invisible">
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:src="@drawable/left_tri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+        <LinearLayout
+            android:id="@+id/content_bg_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/left_radius">
+            <TextView
+                android:id="@+id/iv_content_left"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:textColor="#000000"
+                android:maxWidth="200dp"
+                android:textSize="20sp"
+                tools:text="AABBDDD" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <chapter.android.aweme.ss.com.homework.widget.CircleImageView
+        android:id="@+id/iv_avatar_right"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_girl"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"/>
+
+    <!-- toRightOf 在X的右边-->
+    <LinearLayout
+        android:id="@+id/chat_box_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/iv_avatar_right"
+        android:visibility="invisible">
+        <LinearLayout
+            android:id="@+id/content_bg_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/right_radius">
+            <TextView
+                android:id="@+id/iv_content_right"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:textColor="#000000"
+                android:maxWidth="200dp"
+                android:textSize="20sp"
+                tools:text="AABBDDDDD" />
+        </LinearLayout>
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:src="@drawable/right_tri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotationY="180">
+        </ImageView>
+    </LinearLayout>
+
+</RelativeLayout>

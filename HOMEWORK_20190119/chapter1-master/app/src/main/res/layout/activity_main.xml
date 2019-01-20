@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_lifecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生命周期" />
+
+    <Button
+        android:id="@+id/btn_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Intent详解"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xml解析"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_commonview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="常见View"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecycleView"
+        android:textAllCaps="false" />
+
+
+</LinearLayout>

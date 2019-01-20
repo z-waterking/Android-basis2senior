@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <Button
+        android:id="@+id/btn_implicit_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openBrowser"
+        android:text="隐式intent预埋（打开浏览器）" />
+
+    <Button
+        android:id="@+id/btn_custom_implicit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="customImplicit"
+        android:text="自定义隐式intent" />
+
+
+    <Button
+        android:id="@+id/btn_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="wechatAuthorize"
+        android:text="仿微信授权"
+        android:textAllCaps="false"
+        android:textStyle="normal" />
+
+
+    <Button
+        android:id="@+id/btn_choose_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="chooseContact"
+        android:text="选择联系人"
+        android:textAllCaps="false"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="24dp"
+        android:textStyle="normal" />
+</LinearLayout>

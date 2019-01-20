@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">homework</string>
+
+    <string name="chat_room_title">我和%1$s的对话</string>
+</resources>
