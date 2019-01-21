@@ -1,7 +1,7 @@
 # AndroidStudyCourse_zsf
 此为北理工寒假安卓培训的作业。
 
-# HOMEWORD_20190118
+# HOMEWORK_20190118
 1.使用的组件：
 
 TextVeiw, Button, EditText, ImageView, RadioButton, RadioGroup, progressBar(Horizontal)
