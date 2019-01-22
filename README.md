@@ -51,7 +51,7 @@ ViewGroup的getChildCount()取得所有子孩子的数量，getChildAt()根据id
 
 （2）聊天室页面:实现了名称与头像参数传递、聊天气泡效果、最大长度控制等内容。
 
-# HOMEWORK_2190121
+# HOMEWORK_20190121
 ## 一、Exercise1
 
 1.实现方法：
