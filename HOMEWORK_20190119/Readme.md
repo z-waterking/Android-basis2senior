@@ -1,20 +1,32 @@
 
 # HOMEWORK_20190119
-## 一、Exercise1
-实现方法：
 
-编写MyApplication类继承自Application，在AndroidManifest文件中将此Application注册，实现getname()与setname()方法。
+## 1、Exercise1
+
+* 实现效果
+
+	进入页面时，页面显示从onCreate()到onResume()方法的日志。
 	
-在Exercise1.java文件中，在此Activity的onCreate()方法中，利用getApplication()方法取得当前所在的Application, 强制转化为MyApplication对象，判断getname()不为空时，将值显示在TextView中，否则，跳过；在此Activity的onDestroy()方法中，利用setname()方法将TextView中的文本值进行存储。
-	
-实现效果：
-
-（1）进入页面时，页面显示从onCreate()到onResume()方法的日志。
-
-（2）当旋转手机时，页面显示上一次从onCreate()到onDestroy()的所有周期记录的日志。其中，缓存开始与缓存结束是我手动加入以进行区别的分界线。
+	当旋转手机时，页面显示上一次从onCreate()到onDestroy()的所有周期记录的日志。其中，缓存开始与缓存结束是我手动加入以进行区别的分界线。
 若进行多次旋转，会出现如下界面，为正常现象，因为存储时直接将TextView中的内容完全进行存储，最外层的缓存开始与缓存结束中的内容为上一次保存的内容。：
 
-## 二、Exercise2
+<p align="center">
+    <img src="./pics/homework_exercise1_20190119.gif" alt="Sample"  width="300" height="500">
+    <p align="center">
+        <em>Exercise1 demo</em>
+    </p>
+</p>
+
+* 实现方法
+
+	编写MyApplication类继承自Application，在AndroidManifest文件中将此Application注册，实现getname()与setname()方法。
+	
+在Exercise1.java文件中，在此Activity的onCreate()方法中，利用getApplication()方法取得当前所在的Application, 强制转化为MyApplication对象，判断getname()不为空时，将值显示在TextView中，否则，跳过；在此Activity的onDestroy()方法中，利用setname()方法将TextView中的文本值进行存储。
+
+
+## 2、Exercise2
+实现效果：
+
 实现方法：
 
 ViewGroup的getChildCount()取得所有子孩子的数量，getChildAt()根据id（从0开始到孩子数量-1）取得孩子对象。
