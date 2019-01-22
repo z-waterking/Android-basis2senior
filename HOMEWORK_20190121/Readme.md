@@ -3,7 +3,7 @@
 ## 1、Exercise1
 * 实现效果
 <p align="center">
-    <img src="./pics/homework_exercise1_20190121.gif" alt="Sample"  width="300" height="500">
+    <img src="./pics/homework_erercise1_20190121.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>exercise1 demo</em>
     </p>
