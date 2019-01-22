@@ -64,7 +64,7 @@ ViewGroup的getChildCount()取得所有子孩子的数量，getChildAt()根据id
 
 
 ## 二、Exercise2
-1.	实现方法
+1.实现方法
 
 （1）第一种方法：
 
