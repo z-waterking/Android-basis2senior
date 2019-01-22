@@ -11,7 +11,7 @@
 
 ## 2.使用的组件： 
 
-**TextVeiw **
+**TextVeiw
 ```xml
 <TextView
         android:id="@+id/chatText"
@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressText" />
 ```
-**Button **
+**Button
 ```xml
     <Button
         android:id="@+id/questionButton"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 ```
 
-**EditText **
+**EditText
 ```xml
 <EditText
         android:id="@+id/questionText"
@@ -60,7 +60,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chatText" />
 ```
-**ImageView **
+**ImageView
 ```xml
 <ImageView
         android:id="@+id/logoView"
@@ -73,7 +73,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 ```
-**RadioButton **
+**RadioButton
 ```xml
 <RadioButton
             android:id="@+id/caculateRadio"
@@ -83,7 +83,7 @@
             android:text="计算表达式"
             android:visibility="invisible" />
 ```
-**RadioGroup **
+**RadioGroup
 ```xml
 <RadioGroup
         android:id="@+id/radioGroup"
@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/startButton">
 ```
 
-**progressBar(Horizontal) **
+**progressBar(Horizontal)
 ```xml
 <ProgressBar
         android:id="@+id/progressBar"
