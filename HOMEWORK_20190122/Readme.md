@@ -293,6 +293,8 @@ private void postVideo() {
                     //发送成功
                     Toast.makeText(Solution2C2Activity.this, "发送成功！", Toast.LENGTH_SHORT).show();
                     resetSendBtn();
+                } else {
+                    Toast.makeText(Solution2C2Activity.this, "因某种原因，发送失败！", Toast.LENGTH_SHORT).show();
                 }
             }
             @Override public void onFailure(Call<PostVideoResponse> call, Throwable t) {
