@@ -173,14 +173,20 @@ public class Solution2C2Activity extends AppCompatActivity {
         Callback<PostVideoResponse> callback = new Callback<PostVideoResponse>() {
             @Override public void onResponse(Call<PostVideoResponse> call, Response<PostVideoResponse> response) {
                 //接收到返回值，开始进行处理。
-                PostVideoResponse rs = response.body();
-                if(rs.IsSuccess()){
-                    //发送成功
-                    Toast.makeText(Solution2C2Activity.this, "发送成功！", Toast.LENGTH_SHORT).show();
-                    resetSendBtn();
-                } else {
-                    Toast.makeText(Solution2C2Activity.this, "因某种原因，发送失败！", Toast.LENGTH_SHORT).show();
+                try{
+                    PostVideoResponse rs = response.body();
+                    if(rs.IsSuccess()){
+                        //发送成功
+                        Toast.makeText(Solution2C2Activity.this, "发送成功！", Toast.LENGTH_SHORT).show();
+                        resetSendBtn();
+                    } else {
+                        Toast.makeText(Solution2C2Activity.this, "因某种原因，发送失败！", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception e){
+                    System.out.println("error!");
+                    e.printStackTrace();
                 }
+
             }
             @Override public void onFailure(Call<PostVideoResponse> call, Throwable t) {
                 Toast.makeText(Solution2C2Activity.this.getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();

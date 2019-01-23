@@ -82,9 +82,15 @@ public class Solution2C1Activity extends AppCompatActivity {
         NetworkUtils.getResponseWithRetrofitAsync_Cat(new Callback<Cat[]>() {
             @Override public void onResponse(Call<Cat[]> call, Response<Cat[]> response) {
                 //接收到返回值，开始进行处理。
-                List<Cat> cats = new ArrayList<>(Arrays.asList(response.body()));
-                loadPics(cats);
-                restoreBtn();
+                try{
+                    List<Cat> cats = new ArrayList<>(Arrays.asList(response.body()));
+                    loadPics(cats);
+                    restoreBtn();
+                } catch (Exception e){
+                    System.out.println("error!");
+                    e.printStackTrace();
+                }
+
             }
 
             @Override public void onFailure(Call<Cat[]> call, Throwable t) {
