@@ -4,7 +4,7 @@
 
 * 实现效果
 <p align="center">
-    <img src="./pics/homework_exercise1_20190122.gif" alt="Sample"  width="300" height="500">
+    <img src="./pics/chapter4_exercise1_20190122.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>exercise1 demo</em>
     </p>
@@ -130,7 +130,7 @@ NetworkUtils.getResponseWithRetrofitAsync_Cat(new Callback<Cat[]>() {
 
 * 实现效果
 <p align="center">
-    <img src="./pics/homework_exercise2_20190122.gif" alt="Sample"  width="300" height="500">
+    <img src="./pics/chapter4_exercise2_20190122.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>exercise2 demo</em>
     </p>
