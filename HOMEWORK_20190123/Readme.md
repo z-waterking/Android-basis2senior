@@ -8,21 +8,21 @@
 <p align="center">
     <img src="./pics/basic_homework_add_note.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>exercise1 demo</em>
+        <em>添加Note</em>
     </p>
 </p>
 * 更改完成状态
 <p align="center">
     <img src="./pics/basic_homework_done_note.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>exercise1 demo</em>
+        <em>更改完成状态</em>
     </p>
 </p>
 * 删除Note
 <p align="center">
     <img src="./pics/basic_homework_delete_note.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>exercise1 demo</em>
+        <em>删除Note</em>
     </p>
 </p>
 ## 2.实现方法
@@ -217,21 +217,21 @@ private void deleteNote(Note note) {
 <p align="center">
     <img src="./pics/enhanced_homework_add_note.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>exercise1 demo</em>
+        <em>添加Note</em>
     </p>
 </p>
 * 更改完成状态及删除
 <p align="center">
     <img src="./pics/enhanced_homework_done_delete_note.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>exercise1 demo</em>
+        <em>更改完成状态及删除</em>
     </p>
 </p>
 * 写入文件
 <p align="center">
     <img src="./pics/enhanced_homework_write_file.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>exercise1 demo</em>
+        <em>写入文件</em>
     </p>
 </p>
 ## 2.实现方法
