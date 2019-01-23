@@ -111,9 +111,14 @@ public interface ICatService {
 NetworkUtils.getResponseWithRetrofitAsync_Cat(new Callback<Cat[]>() {
             @Override public void onResponse(Call<Cat[]> call, Response<Cat[]> response) {
                 //接收到返回值，开始进行处理。
-                List<Cat> cats = new ArrayList<>(Arrays.asList(response.body()));
-                loadPics(cats);
-                restoreBtn();
+                try｛
+                     List<Cat> cats = new ArrayList<>(Arrays.asList(response.body()));
+                    loadPics(cats);
+                    restoreBtn();
+                ｝catch(Exception e){
+                    System.out.println("error!");
+                    e.printStackTrace();
+                }
             }
 
             @Override public void onFailure(Call<Cat[]> call, Throwable t) {
@@ -336,10 +341,15 @@ public void fetchFeed(View view) {
         NetworkUtils.getResponseWithRetrofitAsync_Feed(new Callback<FeedResponse>() {
             @Override public void onResponse(Call<FeedResponse> call, Response<FeedResponse> response) {
                 //接收到返回值，开始进行处理。
-                FeedResponse feeds = response.body();
-                mFeeds = feeds.getFeeds();
-                mRv.getAdapter().notifyDataSetChanged();
-                resetRefreshBtn();
+                try｛
+                    FeedResponse feeds = response.body();
+                    mFeeds = feeds.getFeeds();
+                    mRv.getAdapter().notifyDataSetChanged();
+                    resetRefreshBtn();
+                ｝catch(Exception e){
+                    System.out.println("error!");
+                    e.printStackTrace();
+                }
             }
 
             @Override public void onFailure(Call<FeedResponse> call, Throwable t) {
