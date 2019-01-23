@@ -69,7 +69,7 @@ public class MyApplication extends Application {
 ## 2、Exercise2
 * 实现效果：
 <p align="center">
-    <img src="./pics/homework_exercise2_20190119.gif" alt="Sample"  width="700" height="500">
+    <img src="./pics/homework_exercise2_20190119.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>Exercise2 demo</em>
     </p>
@@ -77,7 +77,7 @@ public class MyApplication extends Application {
 * 实现方法：
 **文件中的View结构如图所示。
 <p align="center">
-    <img src="./pics/trees.png" alt="Sample"  width="300" height="500">
+    <img src="./pics/trees.png" alt="Sample"  width="700" height="500">
     <p align="center">
         <em>Exercise2 Tree</em>
     </p>
