@@ -2,12 +2,12 @@
 # 各个ReadMe在各自的文件夹中,且其中都有各自的gif演示图。
 # 请各位分管不同主题的老师移步到各文件夹中查看。
 
-# HOMEWORK_20190118
+# HOMEWORK_20190118_Foundation
 
 ## 1.实现效果
 
 <p align="center">
-    <img src="./pics/homework_20190118.gif" alt="Sample"  width="300" height="500">
+    <img src="./HOMEWORK_20190118_Foundation/pics/homework_20190118.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>exercise1 demo</em>
     </p>
@@ -259,7 +259,7 @@
 
 
 
-# HOMEWORK_20190119
+# HOMEWORK_20190119_UI
 
 ## 1、Exercise1
 
@@ -271,7 +271,7 @@
 若进行多次旋转，会出现如下界面，为正常现象，因为存储时直接将TextView中的内容完全进行存储，最外层的缓存开始与缓存结束中的内容为上一次保存的内容。：
 
 <p align="center">
-    <img src="./pics/homework_exercise1_20190119.gif" alt="Sample"  width="300" height="500">
+    <img src="./HOMEWORK_20190119_UI/pics/homework_exercise1_20190119.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>Exercise1 demo</em>
     </p>
@@ -329,7 +329,7 @@ public class MyApplication extends Application {
 ## 2、Exercise2
 * 实现效果：
 <p align="center">
-    <img src="./pics/homework_exercise2_20190119.gif" alt="Sample"  width="300" height="500">
+    <img src="./HOMEWORK_20190119_UI/pics/homework_exercise2_20190119.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>Exercise2 demo</em>
     </p>
@@ -337,7 +337,7 @@ public class MyApplication extends Application {
 * 实现方法：
 **文件中的View结构如图所示。
 <p align="center">
-    <img src="./pics/trees.png" alt="Sample"  width="300" height="500">
+    <img src="./HOMEWORK_20190119_UI/pics/trees.png" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>Exercise2 Tree</em>
     </p>
@@ -383,7 +383,7 @@ public class MyApplication extends Application {
 **（2）聊天室页面:实现了名称与头像参数传递、聊天气泡效果、最大长度控制等内容。
 
 <p align="center">
-    <img src="./pics/homework_exercise3_20190119.gif" alt="Sample"  width="300" height="500">
+    <img src="./HOMEWORK_20190119_UI/pics/homework_exercise3_20190119.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>Exercise3 demo</em>
     </p>
@@ -614,11 +614,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 ```
 
 
-# HOMEWORK_20190121
+# HOMEWORK_20190121_Network
 ## 1、Exercise1
 * 实现效果
 <p align="center">
-    <img src="./pics/homework_erercise1_20190121.gif" alt="Sample"  width="300" height="500">
+    <img src="./HOMEWORK_20190121_Network/pics/homework_erercise1_20190121.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>exercise1 demo</em>
     </p>
@@ -663,7 +663,7 @@ dependencies {
 ## 二、Exercise2
 * 实现效果
 <p align="center">
-    <img src="./pics/homework_exercise2_20190121.gif" alt="Sample"  width="300" height="500">
+    <img src="./HOMEWORK_20190121_Network/pics/homework_exercise2_20190121.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>exercise1 demo</em>
     </p>
@@ -754,13 +754,13 @@ dependencies {
 ```
 
 
-#HOMEWORK_20190122
+#HOMEWORK_20190122_Animation
 
 ## 1.Exercise1
 
 * 实现效果
 <p align="center">
-    <img src="./pics/homework_exercise1_20190122.gif" alt="Sample"  width="300" height="500">
+    <img src="./HOMEWORK_20190122_Animation/pics/homework_exercise1_20190122.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>exercise1 demo</em>
     </p>
@@ -881,7 +881,7 @@ NetworkUtils.getResponseWithRetrofitAsync_Cat(new Callback<Cat[]>() {
 
 * 实现效果
 <p align="center">
-    <img src="./pics/homework_exercise2_20190122.gif" alt="Sample"  width="300" height="500">
+    <img src="./HOMEWORK_20190122_Animation/pics/homework_exercise2_20190122.gif" alt="Sample"  width="300" height="500">
     <p align="center">
         <em>exercise2 demo</em>
     </p>
