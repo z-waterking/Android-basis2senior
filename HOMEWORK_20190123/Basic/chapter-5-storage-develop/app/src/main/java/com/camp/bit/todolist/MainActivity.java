@@ -213,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
                     selection_args);
             if(count >= 0){
                 Log.d(TAG, "Update Success");
+                notesAdapter.refresh(loadNotesFromDatabase());
                 recyclerView.setAdapter(notesAdapter);
             }
         } catch (Exception e){

@@ -83,12 +83,7 @@ public class NoteActivity extends AppCompatActivity {
             //建立一个ContentValues对象
             ContentValues values = new ContentValues();
             //插入时间date，状态state，内容content
-            //将时间转为标准格式
-//            Date date = new Date();
-//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//            String date_str = sdf.format(date);
             values.put(TodoContract.Todo.COLUMN_NAME_DATE, System.currentTimeMillis());
-
             values.put(TodoContract.Todo.COLUMN_NAME_STATE, 0);
             values.put(TodoContract.Todo.COLUMN_NAME_CONTENT, content);
             long new_id = db.insert(TodoContract.Todo.TABLE_NAME, null, values);
