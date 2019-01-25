@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CameraDemo</string>
+    <string name="title_activity_take_picture">TakePictureActivity</string>
+    <string name="title_activity_record_video">RecordVideoActivity</string>
+    <string name="title_activity_custom_camera">CustomCameraActivity</string>
+</resources>
