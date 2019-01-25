@@ -1,56 +1,57 @@
 # HOMEWORK_20190124_Camera（有点不清晰，使用AndroidStudio进行录制，格式工厂转为GIF。）
 ## 1.实现效果
-* 调用系统相机进行拍照
+*  调用系统相机进行拍照
 <p align="center">
     <img src="./pics/homework_20190125_capturePhoto.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>带封面视频及详情跳转</em>
+        <em>调用系统相机进行拍照</em>
     </p>
 </p>
-* 调用系统相机进行视频录制
+*  调用系统相机进行视频录制
 <p align="center">
     <img src="./pics/homework_20190125_captureVideo.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>视频列表自动播放</em>
+        <em>调用系统相机进行视频录制</em>
     </p>
 </p>
-* 调用Camera实现自动对焦
+*  调用Camera实现自动对焦
 <p align="center">
     <img src="./pics/homework_20190125_autoFocus.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>视频列表自动播放</em>
+        <em>调用Camera实现自动对焦</em>
     </p>
 </p>
-* 调用Camera进行拍照
+*  调用Camera进行拍照
 <p align="center">
     <img src="./pics/homework_20190125_capturePhotoByCamera.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>视频列表自动播放</em>
+        <em>调用Camera进行拍照</em>
     </p>
 </p>
-* 调用Camera进行视频录制
+*  调用Camera进行视频录制
 <p align="center">
     <img src="./pics/homework_20190125_captureVideoByCamera.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>视频列表自动播放</em>
+        <em>调用Camera进行视频录制</em>
     </p>
 </p>
-* 调用Camera进行摄像头切换
+*  调用Camera进行摄像头切换
 <p align="center">
     <img src="./pics/homework_20190125_ConvertCamera.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>视频列表自动播放</em>
+        <em>调用Camera进行摄像头切换</em>
     </p>
 </p>
-* 调用Camera打开闪光灯及镜头对焦
+*  调用Camera打开闪光灯及镜头对焦
 <p align="center">
     <img src="./pics/homework_20190125_FlASH_AND_ZOOM.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>视频列表自动播放</em>
+        <em>调用Camera打开闪光灯及镜头对焦</em>
     </p>
 </p>
 ## 2.实现方法
-* 1.动态权限申请
+*  1.动态权限申请
+
 ```java
 if (ContextCompat.checkSelfPermission(TakePictureActivity.this,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
@@ -69,7 +70,9 @@ if (ContextCompat.checkSelfPermission(TakePictureActivity.this,
                 takePicture();
             }
 ```
-* 2.申请结果
+
+*  2.申请结果
+
 ```java
 switch (requestCode) {
             case REQUEST_EXTERNAL_STORAGE: {
@@ -83,7 +86,9 @@ switch (requestCode) {
             }
         }
 ```
-* 3.直接调用系统摄像头
+
+*  3.直接调用系统摄像头
+
 ```java
 private void takePicture() {
         //todo 打开相机
@@ -102,7 +107,9 @@ private void takePicture() {
         }
     }
 ```
-* 4.保存的文件在屏幕上预览，进行旋转与剪裁。
+
+*  4.保存的文件在屏幕上预览，进行旋转与剪裁。
+
 ```java
 private void setPic() {
         //todo 根据imageView裁剪
@@ -126,7 +133,9 @@ private void setPic() {
         imageView.setImageBitmap(bmp);
     }
 ```
-* 5.调用系统相机进行录制并播放在屏幕上
+
+*  5.调用系统相机进行录制并播放在屏幕上
+
 ```java
 private void Record(){
         Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
@@ -145,7 +154,9 @@ private void Record(){
         }
     }
 ```
-* 6.建立Camera及对应的SurfaceView
+
+*  6.建立Camera及对应的SurfaceView
+
 ```java
 //设置摄像头
         mCamera = getCamera(CAMERA_TYPE);
@@ -156,7 +167,9 @@ private void Record(){
         surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
         surfaceHolder.addCallback(this);
 ```
-* 7.为Camera实现自动对焦
+
+*  7.为Camera实现自动对焦
+
 ```java
 public Camera getCamera(int position) {
         CAMERA_TYPE = position;
@@ -179,14 +192,18 @@ public Camera getCamera(int position) {
         return cam;
     }
 ```
-* 8.利用Camera拍一张照片
+
+*  8.利用Camera拍一张照片
+
 ```java
 findViewById(R.id.btn_picture).setOnClickListener(v -> {
             //todo 拍一张照片
             mCamera.takePicture(null, null, mPicture);
         });
 ```
-* 9.利用Camera进行录制,此处用了MediaRecorder，需要特别注意其状态的改变。
+
+*  9.利用Camera进行录制,此处用了MediaRecorder，需要特别注意其状态的改变。
+
 ```java
 findViewById(R.id.btn_record).setOnClickListener(v -> {
             //todo 录制，第一次点击是start，第二次点击是stop
@@ -230,7 +247,9 @@ findViewById(R.id.btn_record).setOnClickListener(v -> {
             }
         });
 ```
-* 10.切换前后摄像头
+
+*  10.切换前后摄像头
+
 ```java
 findViewById(R.id.btn_facing).setOnClickListener(v -> {
             //todo 切换前后摄像头
@@ -249,7 +268,9 @@ findViewById(R.id.btn_facing).setOnClickListener(v -> {
 
         });
 ```
-* 11.开启闪光灯及ZOOM的调整
+
+*  11.开启闪光灯及ZOOM的调整
+
 ```java
 
         findViewById(R.id.btn_zoom).setOnClickListener(v -> {
