@@ -1,6 +1,8 @@
 package com.ss.android.mediaplayersample.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.media.MediaMetadataRetriever;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -8,14 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
 import com.ss.android.mediaplayersample.R;
-import com.ss.android.mediaplayersample.SimplePlayerActivity;
 import com.ss.android.mediaplayersample.bean.Feed;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
@@ -50,15 +54,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         StandardGSYVideoPlayer videoPlayer = holder.videoPlayer;
         videoPlayer.setUp(holder.video_url, true, holder.user_name);
         //增加封面
-//        ImageView imageView = holder.imageView;
-//        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-//        imageView.setImageURL(R.drawable.);
-//        videoPlayer.setThumbImageView(imageView);
+        ImageView imageView = holder.imageView;
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        Glide.with(imageView.getContext()).load(holder.image_url).into(imageView);
+        holder.linearLayout.removeView(imageView);
+        videoPlayer.setThumbImageView(imageView);
+        //用视频第一帧作为封面
         //增加title
-        videoPlayer.getTitleTextView().setVisibility(View.VISIBLE);
+//        videoPlayer.getTitleTextView().setVisibility(View.VISIBLE);
         //是否可以滑动调整
         videoPlayer.setIsTouchWiget(true);
-
+        //列表自动播放
         videoPlayer.startPlayLogic();
     }
 
@@ -69,6 +75,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         //绑定播放器
+        private LinearLayout linearLayout;
         private StandardGSYVideoPlayer videoPlayer;
         private TextView textView;
         private ImageView imageView;
@@ -78,7 +85,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         private String video_url;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            linearLayout = (LinearLayout) itemView.findViewById(R.id.linearlayout);
             videoPlayer = (StandardGSYVideoPlayer) itemView.findViewById(R.id.video_player);
+            imageView = (ImageView) itemView.findViewById(R.id.image_cover);
             textView = (TextView) itemView.findViewById(R.id.detail);
             textView.setOnClickListener(this);
         }
