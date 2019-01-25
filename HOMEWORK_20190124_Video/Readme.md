@@ -4,14 +4,14 @@
 <p align="center">
     <img src="./pics/homework_20190125_ShowVideos_And_Details.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>添加Note</em>
+        <em>带封面视频及详情跳转</em>
     </p>
 </p>
 * 视频列表自动播放
 <p align="center">
     <img src="./pics/homework_20190125_AutoDisplay.gif.gif" alt="Sample"  width="300" height="500">
     <p align="center">
-        <em>添加Note</em>
+        <em>视频列表自动播放</em>
     </p>
 </p>
 ## 2.实现方法
