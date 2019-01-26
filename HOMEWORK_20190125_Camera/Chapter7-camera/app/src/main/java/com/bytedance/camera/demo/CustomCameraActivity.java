@@ -54,9 +54,7 @@ public class CustomCameraActivity extends AppCompatActivity implements SurfaceHo
         setContentView(R.layout.activity_custom_camera);
         //设置申请权限
         //todo 在这里申请相机、存储、音频的权限
-        ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO},
-                    REQUEST_EXTERNAL_STORAGE);
+        //在外面已经申请成功了
         //由于加上了申请权限，所以在此处进行开始。
         //设置摄像头
         mCamera = getCamera(CAMERA_TYPE);
@@ -316,19 +314,4 @@ public class CustomCameraActivity extends AppCompatActivity implements SurfaceHo
         return optimalSize;
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case REQUEST_EXTERNAL_STORAGE: {
-                //todo 判断权限是否已经授予
-                if(grantResults.length == 3 &&
-                        grantResults[0] == PackageManager.PERMISSION_GRANTED &&
-                        grantResults[1] == PackageManager.PERMISSION_GRANTED &&
-                        grantResults[2] == PackageManager.PERMISSION_GRANTED) {
-                    System.out.println("abc");
-                }
-                break;
-            }
-        }
-    }
 }
