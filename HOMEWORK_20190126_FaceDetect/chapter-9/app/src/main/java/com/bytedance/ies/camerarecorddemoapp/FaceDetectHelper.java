@@ -64,7 +64,7 @@ public class FaceDetectHelper {
 
     public void onFaceDetectedCallback(int ret, int top, int bottom, int left, int right) {
         if (mFaceDetectedCallback != null) {
-            //TODO zsf4:得到回调返回的数据
+            //TODO zsf
             mFaceDetectedCallback.onFaceDetected(ret, top, bottom, left, right);
         }
     }
@@ -74,7 +74,7 @@ public class FaceDetectHelper {
     public static void nativeOnFaceDetectedCallback(int ret, int top, int bottom, int left, int right) {
         Log.d("FaceDetectHelper", "JAVA detectFaceCallbackMethod ret : " + ret);
         if (mHelper != null) {
-            //TODO zsf3:得到后端得到的数据
+            //TODO zsf
             mHelper.onFaceDetectedCallback(ret, top, bottom, left, right);
         }
     }

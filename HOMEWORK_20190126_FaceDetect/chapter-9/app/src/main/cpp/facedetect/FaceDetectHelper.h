@@ -21,7 +21,7 @@ private:
     const char *mEffectLicense;
     const char *mEffectModelPath;
 
-    //TODO: zsf 2.更改回调的返回类型
+    //TODO: zsf
     std::function<void(int, int, int, int, int)> mDetectFaceCallback;
 
     byted_effect_handle_t mEffectHandler = NULL;
@@ -50,7 +50,7 @@ public:
                     int stride);
 
     void writeBMP();
-    //TODO zsf5:设置回调
+    //TODO zsf
     void setDetectFaceCallback(std::function<void(int, int, int, int, int)> callback) {
         mDetectFaceCallback = callback;
     }

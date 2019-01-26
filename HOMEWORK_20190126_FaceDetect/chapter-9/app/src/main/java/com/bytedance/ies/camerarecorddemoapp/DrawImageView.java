@@ -50,7 +50,7 @@ public class DrawImageView extends android.support.v7.widget.AppCompatImageView 
         int height = getHeight();
         int width = getWidth();
         //left, top, right, bottom
-        canvas.drawRect(new Rect((int) (width-bottom*1.5), (int) (height-left*1.5), (int) (width-top*1.5), (int) (height-right*1.5)),paint);//绘制矩形，并设置矩形框显示的位置
-//        canvas.drawRect(new Rect(200, 100, 100, 100));
+        canvas.drawRect(new Rect((int) (width-bottom*1.5), (int) (height-left*1.5), (int) (width-top*1.5), (int) (height-right*1.5)),paint);
+        //绘制矩形，并设置矩形框显示的位置
     }
 }

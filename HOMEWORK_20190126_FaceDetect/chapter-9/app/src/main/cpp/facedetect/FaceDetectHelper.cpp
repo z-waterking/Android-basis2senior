@@ -121,7 +121,7 @@ FaceDetectHelper::detectFace(const unsigned char *image, int pixelFormat, int wi
                     LOGD("byted_effect_face_detect face info action : %d - %d", i, item.action);
                     if (item.action > 0) {
                         //TODO: add face rect point
-                        //TODO: zsf1.添加人脸的返回值
+                        //TODO: zsf
                         mDetectFaceCallback(item.action, item.rect.top, item.rect.bottom, item.rect.left,
                                 item.rect.right);
                     }

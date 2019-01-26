@@ -98,12 +98,12 @@ Java_com_bytedance_ies_camerarecorddemoapp_FaceDetectHelper_nativeInit(JNIEnv *e
 
     if (mFaceDetectHelper == NULL) {
         mFaceDetectHelper = new FaceDetectHelper();
-        //TODO zsf4:回调函数
+        //TODO zsf
         mFaceDetectHelper->setDetectFaceCallback([](int ret, int top, int bottom, int left, int right) {
             JNIEnv *_env = Android_JNI_GetEnv();
             if (_env != NULL && detectFaceCallbackMethod && mObj != NULL) {
                 LOGD("jni detectFaceCallbackMethod ret : %d", ret);
-                //TODO zsf3:调用java的函数
+                //TODO zsf
                 _env->CallStaticVoidMethod((jclass) mObj, detectFaceCallbackMethod, ret, top, bottom, left,
                         right);
             }
