@@ -30,7 +30,36 @@ void setDetectFaceCallback(std::function<void(int, int, int, int, int)> callback
     }
 ```
 
-* 4.在java中得到回调的返回数据
+* 4.更改native-lib的回调
+```cpp
+if (faceDetectHelperClass != NULL) {
+        //TODO zsf 一个I指的是一个int
+        detectFaceCallbackMethod = env->GetStaticMethodID(faceDetectHelperClass,
+                                                          "nativeOnFaceDetectedCallback", "(IIIII)V");
+        if (detectFaceCallbackMethod == NULL) {
+            LOGE("detectFaceCallbackMethod NULL");
+        } else {
+            LOGE("detectFaceCallbackMethod success");
+        }
+    }
+
+    mObj = env->NewGlobalRef(faceDetectHelperClass);
+
+    if (mFaceDetectHelper == NULL) {
+        mFaceDetectHelper = new FaceDetectHelper();
+        //TODO zsf
+        mFaceDetectHelper->setDetectFaceCallback([](int ret, int top, int bottom, int left, int right) {
+            JNIEnv *_env = Android_JNI_GetEnv();
+            if (_env != NULL && detectFaceCallbackMethod && mObj != NULL) {
+                LOGD("jni detectFaceCallbackMethod ret : %d", ret);
+                //TODO zsf
+                _env->CallStaticVoidMethod((jclass) mObj, detectFaceCallbackMethod, ret, top, bottom, left,
+                        right);
+            }
+        });
+    }
+```
+* 5.在java中得到回调的返回数据
 ```java
 public void onFaceDetectedCallback(int ret, int top, int bottom, int left, int right) {
         if (mFaceDetectedCallback != null) {
@@ -50,7 +79,7 @@ public void onFaceDetectedCallback(int ret, int top, int bottom, int left, int r
     }
 ```
 
-* 5.更改java断回调函数的类型
+* 6.更改java端回调函数的类型
 ```java
 public interface OnFaceDetectedCallback {
         //TODO zsf
@@ -58,7 +87,7 @@ public interface OnFaceDetectedCallback {
     }
 ```
 
-* 6.在布局文件中加入ImageView及自定义的DrawImageView.
+* 7.在布局文件中加入ImageView及自定义的DrawImageView.
 ```xml
     <ImageView
         android:id="@+id/icon"
@@ -73,7 +102,7 @@ public interface OnFaceDetectedCallback {
         android:layout_centerVertical="true" />
 ```
 
-* 7.在Activity的回调中获得数据，根据返回的动作值，在右下角设置不同的icon.
+* 8.在Activity的回调中获得数据，根据返回的动作值，在右下角设置不同的icon.
 ```java
 FaceDetectHelper.getHelper().setFaceDetectedCallback(new FaceDetectHelper.OnFaceDetectedCallback() {
             @Override
@@ -112,7 +141,7 @@ FaceDetectHelper.getHelper().setFaceDetectedCallback(new FaceDetectHelper.OnFace
         });
 ```
 
-* 8.根据返回的矩形值，进行坐标变换后绘制矩形。
+* 9.根据返回的矩形值，进行坐标变换后绘制矩形。
 ```java
 @Override protected void onDraw(Canvas canvas)
     {
