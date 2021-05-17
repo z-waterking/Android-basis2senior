@@ -2,11 +2,7 @@
 
 ## 1.实现效果
 
-<<<<<<< HEAD
-![img](./pics/homework_20190118.gif)
-=======
 ![img](./01_Foundation/pics/homework_20190118.gif)
->>>>>>> ab543c3ad4a0414cf92bb49c10965de629b9116e
 
 ## 2.使用的组件： 
 
