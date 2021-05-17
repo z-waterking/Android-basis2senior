@@ -2,7 +2,9 @@
 
 ## 1.实现效果
 
-![Image text](./pics/homework_20190118.gif)
+<p align="center">
+    <img src="./pics/homework_20190118.gif" alt="Sample"  width="300" height="500">
+</p>
 
 ## 2.使用的组件： 
 

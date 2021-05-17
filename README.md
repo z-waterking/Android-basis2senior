@@ -2,7 +2,7 @@
 
 ## 01_Foundation
 
-![img](01_Foundation/pics/homework_20190118.gif)
+<img src = "01_Foundation/pics/homework_20190118.gif" >
 
 ## 02_UI
 
@@ -16,9 +16,7 @@
 
 ![img](04_Network/pics/chapter4_exercise1_20190122.gif)
 
-
 ## 05_Storage
-
 
 * 添加Note
 
