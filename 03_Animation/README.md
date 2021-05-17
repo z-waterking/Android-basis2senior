@@ -7,7 +7,7 @@
 
 * 实现方法：
 
-（1）	在build.gradle中：implementation "com.airbnb.android:lottie:2.7.0"。
+（1）在build.gradle中：implementation "com.airbnb.android:lottie:2.7.0"。
 
 ```gradle
 dependencies {
@@ -43,16 +43,14 @@ dependencies {
 ```
 
 ## 二、Exercise2
+
 * 实现效果
-<p align="center">
-    <img src="./pics/homework_exercise2_20190121.gif" alt="Sample"  width="300" height="500">
-    <p align="center">
-        <em>exercise1 demo</em>
-    </p>
-</p>
+
+![img](./pics/homework_exercise2_20190121.gif)
+
 * 实现方法
 
-**第一种方法：
+* 第一种方法：
 
 利用ObjectAnimator，同时定义ScaleX，ScaleY，Alpha属性，然后将其加入animatorSet的playTogether方法中进行同时播放。
 ```java
@@ -96,7 +94,7 @@ dependencies {
         animatorSet.playTogether(animator1, animator_scaleX, animator_scaleY, animator_alpha);
         animatorSet.start();
 ```
-**第二种方法：
+* 第二种方法：
 
 利用ValueAnimator，定义0,1之间的数值发生器，并将其映射为背景、ScaleX，ScaleY，Alpha的值，然后进行展示。
 ```java

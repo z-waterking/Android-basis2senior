@@ -8,7 +8,8 @@
 
 * 实现方法
 
-**1.实现Cat类的解析
+* 1.实现Cat类的解析
+
 ```java
 public class Cat {
     // TODO-C1 (1) Implement your Cat Bean here according to the response json
@@ -82,15 +83,18 @@ public class Cat {
 
 }
 ```
-**2.实现ICatService的interface,注意参数为List
+
+* 2.实现ICatService的interface,注意参数为List
+
 ```java
 public interface ICatService {
     // TODO-C1 (2) Implement your Cat Request here, url: https://api.thecatapi.com/v1/images/search?limit=5
     @GET("v1/images/search?limit=5") Call<Cat[]> randomCat();
 }
 ```
-**3.实现requestData方法，
-***在NetworkUtils中实现getResponseWithRetrofitAsync_Feed方法
+
+* 3.实现requestData方法，
+* 在NetworkUtils中实现getResponseWithRetrofitAsync_Feed方法
 ```java
 //实现getResponseWithRetrofitAsync方法用来请求Feed数据
     public static void getResponseWithRetrofitAsync_Feed(Callback<FeedResponse> callback) {
@@ -103,7 +107,8 @@ public interface ICatService {
                 enqueue(callback);
     }
 ```
-***调用它，并定义回调函数
+
+* 调用它，并定义回调函数
 ```java
 NetworkUtils.getResponseWithRetrofitAsync_Cat(new Callback<Cat[]>() {
             @Override public void onResponse(Call<Cat[]> call, Response<Cat[]> response) {
@@ -123,17 +128,16 @@ NetworkUtils.getResponseWithRetrofitAsync_Cat(new Callback<Cat[]>() {
             }
         });
 ```
+
 ## 2.Exercise2
 
 * 实现效果
-<p align="center">
-    <img src="./pics/chapter4_exercise2_20190122.gif" alt="Sample"  width="300" height="500">
-    <p align="center">
-        <em>exercise2 demo</em>
-    </p>
-</p>
+
+![img](./pics/chapter4_exercise2_20190122.gif)
+
 * 实现方法
-**1.实现Feed的解析
+
+* 1.实现Feed的解析
 ```java
 public class Feed {
 
@@ -169,7 +173,7 @@ public class Feed {
     }
 }
 ```
-**2.实现FeedResponse的解析
+* 2.实现FeedResponse的解析
 ```java
 public class FeedResponse {
 
@@ -192,7 +196,8 @@ public class FeedResponse {
     }
 }
 ```
-**3.实现PostVideoResponse的解析
+
+* 3.实现PostVideoResponse的解析
 ```java
 public class PostVideoResponse {
 
@@ -250,7 +255,8 @@ public class PostVideoResponse {
 }
 
 ```
-**4.实现调用选择图片和视频的系统接口
+
+* 4.实现调用选择图片和视频的系统接口
 ```java
 public void chooseImage() {
         // TODO-C2 (4) Start Activity to select an image
@@ -273,7 +279,8 @@ public void chooseImage() {
                 PICK_VIDEO);
     }
 ```
-**5.进行视频上传，将所有需要的信息进行处理后上传，注意文件的处理。
+
+* 5.进行视频上传，将所有需要的信息进行处理后上传，注意文件的处理。
 ```java
 private void postVideo() {
         mBtn.setText("POSTING...");
@@ -311,7 +318,8 @@ private void postVideo() {
                 enqueue(callback);
     }
 ```
-**6.实现IMiniDouyinService的服务。
+
+* 6.实现IMiniDouyinService的服务。
 ```java
 public interface IMiniDouyinService {
     // TODO-C2 (7) Implement your MiniDouyin PostVideo Request here, url: (POST) http://10.108.10.39:8080/minidouyin/video
@@ -326,7 +334,8 @@ public interface IMiniDouyinService {
     @GET("minidouyin/feed") Call<FeedResponse> allFeed();
 }
 ```
-**7.实现请求刷新图片的接口
+
+* 7.实现请求刷新图片的接口
 ```java
 public void fetchFeed(View view) {
         mBtnRefresh.setText("requesting...");
@@ -355,7 +364,8 @@ public void fetchFeed(View view) {
         });
     }
 ```
-**8.将图片展示在屏幕中
+
+* 8.将图片展示在屏幕中
 ```java
 @Override
             public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {

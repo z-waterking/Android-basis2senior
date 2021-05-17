@@ -28,6 +28,7 @@ public static class Todo implements BaseColumns{
         public static final String COLUMN_NAME_CONTENT = "content";
     }
 ```
+
 * 2.定义了创建表和删除表的语句，
 ```java
 // TODO 1 定义表结构和 SQL 语句常量
@@ -46,6 +47,7 @@ public static class Todo implements BaseColumns{
 
     }
 ```
+
 * 3.完成TodoDbHelper的onCreate方法
 ```java
 @Override
@@ -60,6 +62,7 @@ public static class Todo implements BaseColumns{
         }
     }
 ```
+
 * 4.在NoteActivity界面添加TodoDbHelper和SQLiteDatabase的定义、实现及释放
 ```java
 //定义DbHelper对象和数据库引用对象
@@ -76,6 +79,7 @@ public static class Todo implements BaseColumns{
         super.onDestroy();
     }
 ```
+
 * 5.完成插入方法
 ```java
 private boolean saveNote2Database(String content) {
@@ -99,6 +103,7 @@ private boolean saveNote2Database(String content) {
         return false;
     }
 ```
+
 * 6.根据之前定义的数据库列及类型，完成数据库的获取数据方法
 ```java
 // TODO 4 从数据库中查询数据，并转换成 JavaBeans
@@ -145,6 +150,7 @@ private boolean saveNote2Database(String content) {
         }
         return null;
 ```
+
 * 7.实现点击复选框时state状态的更新
 ```java
 private void updateNode(Note note) {
@@ -175,6 +181,7 @@ private void updateNode(Note note) {
 
     }
 ```
+
 * 8.实现数据的删除
 ```java
 private void deleteNote(Note note) {
@@ -205,26 +212,17 @@ private void deleteNote(Note note) {
 ## 1.实现效果
 
 * 添加Note
-<p align="center">
-    <img src="./pics/enhanced_homework_add_note.gif" alt="Sample"  width="300" height="500">
-    <p align="center">
-        <em>添加Note</em>
-    </p>
-</p>
+
+![img](./pics/enhanced_homework_add_note.gif)
+    
 * 更改完成状态及删除
-<p align="center">
-    <img src="./pics/enhanced_homework_done_delete_note.gif" alt="Sample"  width="300" height="500">
-    <p align="center">
-        <em>更改完成状态及删除</em>
-    </p>
-</p>
+
+![img](./pics/enhanced_homework_done_delete_note.gif)
+
 * 写入文件
-<p align="center">
-    <img src="./pics/enhanced_homework_write_file.gif" alt="Sample"  width="300" height="500">
-    <p align="center">
-        <em>写入文件</em>
-    </p>
-</p>
+
+![img](./pics/enhanced_homework_write_file.gif)
+
 ## 2.实现方法
 
 * 1.在Todo中增加优先级列名的定义
@@ -238,6 +236,7 @@ public static class Todo implements BaseColumns{
         public static final String COLUMN_NAME_PRIORITY = "priority";
     }
 ```
+
 * 2.在TodoDbHelper中增加版本号，实现OnUpgrade方法
 ```java
 for (int i = oldVersion; i < newVersion; i++){
@@ -257,6 +256,7 @@ for (int i = oldVersion; i < newVersion; i++){
             }
         }
 ```
+
 * 3.修改Note的定义，增加priority属性
 ```java
     public final long id;
@@ -273,6 +273,7 @@ for (int i = oldVersion; i < newVersion; i++){
         this.priority = priority;
     }
 ```
+
 * 4.在activity_main.xml中增加Spinner组件用来对优先级进行选择，并建立spingarr.xml为其提供数据。
 ```xml
 <LinearLayout
@@ -297,6 +298,7 @@ for (int i = oldVersion; i < newVersion; i++){
             android:entries="@array/spingarr"></Spinner>
     </LinearLayout>
 ```
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
@@ -307,6 +309,7 @@ for (int i = oldVersion; i < newVersion; i++){
     </string-array>
 </resources>
 ```
+
 * 5.在NoteActivity中增加获取下拉框的值的代码
 ```java
 //取得优先级框
@@ -320,6 +323,7 @@ for (int i = oldVersion; i < newVersion; i++){
             inputManager.showSoftInput(editText, 0);
         }
 ```
+
 * 6.判断完成后，将优先级也作为参数进行返回
 ```java
 String priority = priority_view.getSelectedItem().toString();
@@ -335,6 +339,7 @@ String priority = priority_view.getSelectedItem().toString();
                     return;
                 }
 ```
+
 * 7.修改插入数据库的代码，增加插入优先级
 ```java
 private boolean saveNote2Database(String content, int priority) {
@@ -359,6 +364,7 @@ private boolean saveNote2Database(String content, int priority) {
         return false;
     }
 ```
+
 * 8.对查询操作进行按照优先级降序排序
 ```java
 cursor = db_read.query(TodoContract.Todo.TABLE_NAME,
@@ -372,6 +378,7 @@ cursor = db_read.query(TodoContract.Todo.TABLE_NAME,
                             TodoContract.Todo.COLUMN_NAME_PRIORITY+" DESC"
                             );
 ```
+
 * 9.修改数据库查询的代码，增加获取优先级列
 ```java
 while (cursor.moveToNext()) {
@@ -397,6 +404,7 @@ while (cursor.moveToNext()) {
                 result.add(note);
             }
 ```
+
 * 10.对NoteViewHolder进行修改，更新时根据Note的priority进行背景色修改
 ```java
 //设置背景颜色
@@ -409,6 +417,7 @@ while (cursor.moveToNext()) {
             back.setBackgroundColor(Color.parseColor("#FFF68F"));
         }
 ```
+
 * 11.在DebugActivity中，选择内部私有空间的位置，建立文件，进行写入，并读取。利用FileWriter,BufferedWritter,FileReader,BufferedReader实现。
 ```java
  //写入文件
