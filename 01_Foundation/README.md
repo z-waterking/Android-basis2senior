@@ -2,13 +2,11 @@
 
 ## 1.实现效果
 
-<p align="center">
-    <img src="./pics/homework_20190118.gif" alt="Sample"  width="300" height="500">
-</p>
+![img](https://github.com/z-waterking/Android-basis2senior/blob/master/01_Foundation/pics/homework_20190118.gif)
 
 ## 2.使用的组件： 
 
-**TextVeiw
+* TextVeiw
 ```xml
 <TextView
         android:id="@+id/chatText"
@@ -25,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressText" />
 ```
-**Button
+* Button
 ```xml
     <Button
         android:id="@+id/questionButton"
@@ -41,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 ```
 
-**EditText
+* EditText
 ```xml
 <EditText
         android:id="@+id/questionText"
@@ -57,7 +55,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chatText" />
 ```
-**ImageView
+* ImageView
 ```xml
 <ImageView
         android:id="@+id/logoView"
@@ -70,7 +68,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 ```
-**RadioButton
+* RadioButton
 ```xml
 <RadioButton
             android:id="@+id/caculateRadio"
@@ -80,7 +78,7 @@
             android:text="计算表达式"
             android:visibility="invisible" />
 ```
-**RadioGroup
+* RadioGroup
 ```xml
 <RadioGroup
         android:id="@+id/radioGroup"
@@ -94,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/startButton">
 ```
 
-**progressBar(Horizontal)
+* progressBar(Horizontal)
 ```xml
 <ProgressBar
         android:id="@+id/progressBar"
@@ -109,7 +107,7 @@
 
 ## 3.APP功能：
 
-*   1.取得各个元素
+*  1.取得各个元素
 ```java
 //取得进度条
         pb = findViewById(R.id.progressBar);
@@ -129,7 +127,7 @@
         //取得提问按钮
         questionButton = findViewById(R.id.questionButton);
 ```
-*   2.点击启动按钮加载进度条，同时在TextView中动态更新进度
+*  2.点击启动按钮加载进度条，同时在TextView中动态更新进度
 ```java
 //启动按钮点击后，加载进度条，完成后，启动按钮消失，其余组件显示
         startButton.setOnClickListener(new View.OnClickListener() {
