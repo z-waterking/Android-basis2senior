@@ -14,7 +14,7 @@
 
 * 实现方法
 
-**编写MyApplication类继承自Application，在AndroidManifest文件中将此Application注册，实现getname()与setname()方法。
+* 编写MyApplication类继承自Application，在AndroidManifest文件中将此Application注册，实现getname()与setname()方法。
 ```java
 public class MyApplication extends Application {
     public String name;
@@ -33,7 +33,8 @@ public class MyApplication extends Application {
     }
 }
 ```
-**在Exercise1.java文件中，在此Activity的onCreate()方法中，利用getApplication()方法取得当前所在的Application, 强制转化为MyApplication对象，判断getname()不为空时，将值显示在TextView中，否则，跳过；在此Activity的onDestroy()方法中，利用setname()方法将TextView中的文本值进行存储。
+
+* 在Exercise1.java文件中，在此Activity的onCreate()方法中，利用getApplication()方法取得当前所在的Application, 强制转化为MyApplication对象，判断getname()不为空时，将值显示在TextView中，否则，跳过；在此Activity的onDestroy()方法中，利用setname()方法将TextView中的文本值进行存储。
 ```java
  @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,23 +64,18 @@ public class MyApplication extends Application {
 
 ## 2、Exercise2
 * 实现效果：
-<p align="center">
-    <img src="./pics/homework_exercise2_20190119.gif" alt="Sample"  width="300" height="500">
-    <p align="center">
-        <em>Exercise2 demo</em>
-    </p>
-</p>
-* 实现方法：
-**文件中的View结构如图所示。
-<p align="center">
-    <img src="./pics/trees.png" alt="Sample"  width="700" height="500">
-    <p align="center">
-        <em>Exercise2 Tree</em>
-    </p>
-</p>
-**利用ViewGroup的getChildCount()取得所有子孩子的数量，getChildAt()根据id（从0开始到孩子数量-1）取得孩子对象。
 
-**再利用队列对其进行层序遍历。遍历时判断是否是VierGroup的实例，若是，则将其孩子节点加入队列；否则，若是View，则数量加1.考虑空View与其中存在非View对象的情况下，前者返回0，后者返回-1.
+![img](./pics/homework_exercise2_20190119.gif)
+
+* 实现方法：
+
+* 文件中的View结构如图所示。
+
+![img](./pics/trees.png)
+
+* 利用ViewGroup的getChildCount()取得所有子孩子的数量，getChildAt()根据id（从0开始到孩子数量-1）取得孩子对象。
+
+* 再利用队列对其进行层序遍历。遍历时判断是否是VierGroup的实例，若是，则将其孩子节点加入队列；否则，若是View，则数量加1.考虑空View与其中存在非View对象的情况下，前者返回0，后者返回-1.
 ```java
 //将其看作树结构，进行层序遍历
     public int getAllChildViewCount(View view) {
@@ -113,20 +109,15 @@ public class MyApplication extends Application {
 ```
 ## 三、Exercise3
 * 实现效果：
-**（1）消息页面:实现了每个item中的控件设置，包括姓名、描述、头像等的设置。
+*（1）消息页面:实现了每个item中的控件设置，包括姓名、描述、头像等的设置。
 
-**（2）聊天室页面:实现了名称与头像参数传递、聊天气泡效果、最大长度控制等内容。
+*（2）聊天室页面:实现了名称与头像参数传递、聊天气泡效果、最大长度控制等内容。
 
-<p align="center">
-    <img src="./pics/homework_exercise3_20190119.gif" alt="Sample"  width="300" height="500">
-    <p align="center">
-        <em>Exercise3 demo</em>
-    </p>
-</p>
+~~![img](./pics/homework_exercise3_20190119.gif)~~
 
 * 实现方法：
 
-**（1）完成recycleView中的单个item的xml文件。**
+*（1）完成recycleView中的单个item的xml文件。
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -197,7 +188,7 @@ public class MyApplication extends Application {
 </RelativeLayout>
 ```
 
-**（2）在Activity中建立item之后，完成Adapter。并在Adapter中进行ViewHolder的建立及相应的方法实现过程，实现了点击Item时跳转页面；同时利用Intent向另一个Activity传递参数。
+*（2）在Activity中建立item之后，完成Adapter。并在Adapter中进行ViewHolder的建立及相应的方法实现过程，实现了点击Item时跳转页面；同时利用Intent向另一个Activity传递参数。
 ```java
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
@@ -300,7 +291,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 }
 
 ```
-**（3）在聊天室页面建立另外一个recycleView，完成对应的聊天框xml，实现了气泡效果以及对方的聊天内容放在左边，自己的聊天内容放在右边。
+*（3）在聊天室页面建立另外一个recycleView，完成对应的聊天框xml，实现了气泡效果以及对方的聊天内容放在左边，自己的聊天内容放在右边。
 ```java
 //建立Recyclelist
         //定义recycleView

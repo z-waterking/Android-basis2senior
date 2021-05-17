@@ -28,6 +28,7 @@ public interface IMiniDouyinService {
     @GET("minidouyin/feed") Call<FeedResponse> allFeed();
 }
 ```
+
 * 2.实现抓取到的数据JSON格式的解析
 ```java
 public class FeedResponse {
@@ -86,6 +87,7 @@ public class Feed {
     }
 }
 ```
+
 * 3.实现RecyclerView
 ```java
 //建立RecyclerView
@@ -105,6 +107,7 @@ public class Feed {
         mRv.setAdapter(mAdapter);
     }
 ```
+
 * 4.实现与RecyclerView绑定的Adapter与ViewHolder
 ```java
 
@@ -191,7 +194,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     }
 }
 ```
+
 * 5.实现每个item的布局文件,注意：此处有一个TextView用来进行点击跳转详情页面。此处由于ImageView放在了文件中，因此在进行封面设置时，需要先从其父节点中将其移除。
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -217,6 +222,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         android:layout_height="match_parent" />
 </LinearLayout>
 ```
+
 * 6.绑定事件的具体实现
 ```java
 @Override
@@ -242,6 +248,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         videoPlayer.startPlayLogic();
     }
 ```
+
 * 7.通过ItemClickListener将点击每个Item的事件带着数据传给了详情页面，在详情页面进行视频的播放。
 ```java
 public class DetailPlayerActivity extends GSYBaseActivityDetail<StandardGSYVideoPlayer> {

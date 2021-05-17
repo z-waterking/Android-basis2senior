@@ -2,7 +2,7 @@
 
 ## 1.实现效果
 
-![img](https://github.com/z-waterking/Android-basis2senior/blob/master/01_Foundation/pics/homework_20190118.gif)
+![img](./pics/homework_20190118.gif)
 
 ## 2.使用的组件： 
 

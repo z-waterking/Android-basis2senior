@@ -136,6 +136,7 @@ FaceDetectHelper.getHelper().setFaceDetectedCallback(new FaceDetectHelper.OnFace
 ```
 
 * 9.根据返回的矩形值，进行坐标变换后绘制矩形。
+
 ```java
 @Override protected void onDraw(Canvas canvas)
     {
