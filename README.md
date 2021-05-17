@@ -28,7 +28,7 @@
 
 * 方块动画
 
-![img](./03_Animation/pics/homework_erercise1_20190121.gif)
+![img](./03_Animation/pics/homework_exercise2_20190121.gif)
 
 ## 04_Network
 
