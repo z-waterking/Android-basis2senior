@@ -1,13 +1,8 @@
-# HOMEWORK_20190118_Foundation
+# 01_Foundation
 
 ## 1.实现效果
 
-<p align="center">
-    <img src="./pics/homework_20190118.gif" alt="Sample"  width="300" height="500">
-    <p align="center">
-        <em>exercise1 demo</em>
-    </p>
-</p>
+![Image text](./pics/homework_20190118.gif)
 
 ## 2.使用的组件： 
 
@@ -109,6 +104,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chatView" />
 ```
+
 ## 3.APP功能：
 
 *   1.取得各个元素
