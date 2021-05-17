@@ -2,7 +2,7 @@
 
 ## 01_Foundation
 
-![img](01_Foundation/pics/homework_20190118.gif)
+![img](/01_Foundation/pics/homework_20190118.gif)
 
 ## 02_UI
 
