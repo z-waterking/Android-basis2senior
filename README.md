@@ -28,7 +28,12 @@
 
 * 方块动画
 
-![img](./03_Animation/pics/homework_exercise2_20190121.gif)
+![img](./02_UI/pics/homework_exercise2_20190119.gif)
+
+## 03_Animation
+
+![img](./03_Animation/pics/homework_erercise1_20190121.gif)
+
 
 ## 04_Network
 
@@ -37,6 +42,7 @@
 ![img](./04_Network/pics/chapter4_exercise1_20190122.gif)
 
 * 发送图片
+
 ![img](./04_Network/pics/chapter4_exercise2_20190122.gif)
 
 ## 05_Storage
@@ -52,7 +58,6 @@
 * 删除Note
 
 ![img](./05_Storage/pics/basic_homework_delete_note.gif)
-
 
 * 加强版-添加Note
 
@@ -107,8 +112,8 @@
 
 ![img](./07_Camera/pics/homework_20190125_FlASH_AND_ZOOM.gif)
 
-
 ## 08_FaceDetect
 
 * 人脸检测
 ![img](./08_FaceDetect/pics/homework_20190126_facedetect.gif)
+

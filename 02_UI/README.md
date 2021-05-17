@@ -113,7 +113,11 @@ public class MyApplication extends Application {
 
 *（2）聊天室页面:实现了名称与头像参数传递、聊天气泡效果、最大长度控制等内容。
 
+<<<<<<< HEAD
 ~~![img](./pics/homework_exercise3_20190119.gif)~~
+=======
+![img](./pics/homework_exercise3_20190119.gif)
+>>>>>>> ab543c3ad4a0414cf92bb49c10965de629b9116e
 
 * 实现方法：
 
