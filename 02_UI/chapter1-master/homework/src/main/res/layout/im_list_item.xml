@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingTop="12dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp"
+    tools:background="@color/colorBackground"
+    android:background="@drawable/recycler_item_selector">
+
+    <FrameLayout
+        android:id="@+id/iv_avatar_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp">
+
+        <!--放在默认位置-->
+        <chapter.android.aweme.ss.com.homework.widget.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_girl" />
+
+        <!--放在右下角-->
+        <ImageView
+            android:id="@+id/robot_notice"
+            style="@style/IMVerifyBdage"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+    <!-- toRightOf 在X的右边-->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_avatar_header"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        tools:text="AABBCC" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_alignLeft="@id/tv_title"
+        android:layout_marginTop="4dp"
+        android:singleLine="true"
+        android:textColor="#4cffffff"
+        android:textSize="13sp"
+        tools:text="123321123" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="#4cffffff"
+        android:textSize="12sp"
+        tools:text="5分钟前" />
+
+</RelativeLayout>

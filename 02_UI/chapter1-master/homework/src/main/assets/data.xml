@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<messages>
+    <message> <!--元素  即 对象 -->
+        <title isOfficial="true">抖音小助手</title> <!--子元素   isOfficial是属性-->
+        <hashtag>#收下我的双下巴祝福</hashtag>
+        <time>昨天</time>
+        <icon>TYPE_ROBOT</icon>
+    </message>
+    <message>
+        <title isOfficial="true">游戏小助手</title>
+        <hashtag>抖出好游戏</hashtag>
+        <time>刚刚</time>
+        <icon>TYPE_GAME</icon>
+    </message>
+    <message>
+        <title isOfficial="true">系统消息</title>
+        <hashtag>账号登录提醒</hashtag>
+        <time>12-28</time>
+        <icon>TYPE_SYSTEM</icon>
+    </message>
+    <message>
+        <title isOfficial="false">陌生人消息</title>
+        <hashtag>转发[视频]</hashtag>
+        <time>12-18</time>
+        <icon>TYPE_STRANGER</icon>
+    </message>
+    <message>
+        <title isOfficial="false">王火火</title>
+        <hashtag>hello,world</hashtag>
+        <time>12-12</time>
+        <icon>TYPE_USER</icon>
+    </message>
+    <message> <!--元素  即 对象 -->
+        <title isOfficial="true">抖音小助手</title> <!--子元素   isOfficial是属性-->
+        <hashtag>#确认过眼神我是画中人</hashtag>
+        <time>昨天</time>
+        <icon>TYPE_ROBOT</icon>
+    </message>
+    <message>
+        <title isOfficial="true">游戏小助手</title>
+        <hashtag>今天你农药了吗</hashtag>
+        <time>刚刚</time>
+        <icon>TYPE_GAME</icon>
+    </message>
+    <message>
+        <title isOfficial="true">系统消息</title>
+        <hashtag>感谢你参加本次举报活动</hashtag>
+        <time>12-28</time>
+        <icon>TYPE_SYSTEM</icon>
+    </message>
+    <message>
+        <title isOfficial="false">陌生人消息</title>
+        <hashtag>猜猜我是谁</hashtag>
+        <time>12-12</time>
+        <icon>TYPE_STRANGER</icon>
+    </message>
+    <message>
+        <title isOfficial="false">吴佳煜</title>
+        <hashtag>我是抖音女神</hashtag>
+        <time>12-18</time>
+        <icon>TYPE_USER</icon>
+    </message>
+    <message> <!--元素  即 对象 -->
+        <title isOfficial="true">抖音小助手</title> <!--子元素   isOfficial是属性-->
+        <hashtag>甜蜜糖心</hashtag>
+        <time>昨天</time>
+        <icon>TYPE_ROBOT</icon>
+    </message>
+    <message>
+        <title isOfficial="true">游戏小助手</title>
+        <hashtag>抖出好游戏</hashtag>
+        <time>刚刚</time>
+        <icon>TYPE_GAME</icon>
+    </message>
+    <message>
+        <title isOfficial="true">系统消息</title>
+        <hashtag>账号登录提醒</hashtag>
+        <time>12-28</time>
+        <icon>TYPE_SYSTEM</icon>
+    </message>
+    <message>
+        <title isOfficial="false">陌生人消息</title>
+        <hashtag>你好啊，我是小可爱</hashtag>
+        <time>12-12</time>
+        <icon>TYPE_STRANGER</icon>
+    </message>
+    <message>
+        <title isOfficial="false">田馥甄</title>
+        <hashtag>魔鬼中的天使</hashtag>
+        <time>12-18</time>
+        <icon>TYPE_USER</icon>
+    </message>
+    <message> <!--元素  即 对象 -->
+        <title isOfficial="true">抖音小助手</title> <!--子元素   isOfficial是属性-->
+        <hashtag>独步舞林</hashtag>
+        <time>昨天</time>
+        <icon>TYPE_ROBOT</icon>
+    </message>
+    <message>
+        <title isOfficial="true">游戏小助手</title>
+        <hashtag>抖出好游戏</hashtag>
+        <time>刚刚</time>
+        <icon>TYPE_GAME</icon>
+    </message>
+    <message>
+        <title isOfficial="true">系统消息</title>
+        <hashtag>在线时间太长了，请注意眼睛休息哈</hashtag>
+        <time>12-28</time>
+        <icon>TYPE_SYSTEM</icon>
+    </message>
+    <message>
+        <title isOfficial="false">陌生人消息</title>
+        <hashtag>猜猜我是谁</hashtag>
+        <time>12-12</time>
+        <icon>TYPE_STRANGER</icon>
+    </message>
+    <message>
+        <title isOfficial="false">周杰伦</title>
+        <hashtag>哎哟，不错哦</hashtag>
+        <time>1-11</time>
+        <icon>TYPE_USER</icon>
+    </message>
+    <message> <!--元素  即 对象 -->
+        <title isOfficial="true">抖音小助手</title> <!--子元素   isOfficial是属性-->
+        <hashtag>一般人生</hashtag>
+        <time>昨天</time>
+        <icon>TYPE_ROBOT</icon>
+    </message>
+    <message>
+        <title isOfficial="true">游戏小助手</title>
+        <hashtag>抖音真好玩</hashtag>
+        <time>刚刚</time>
+        <icon>TYPE_GAME</icon>
+    </message>
+    <message>
+        <title isOfficial="true">系统消息</title>
+        <hashtag>异地登录提醒</hashtag>
+        <time>12-28</time>
+        <icon>TYPE_SYSTEM</icon>
+    </message>
+    <message>
+        <title isOfficial="false">陌生人消息</title>
+        <hashtag>你侧脸好像周杰伦</hashtag>
+        <time>12-12</time>
+        <icon>TYPE_STRANGER</icon>
+    </message>
+    <message>
+        <title isOfficial="false">林俊杰</title>
+        <hashtag>可惜没有如果</hashtag>
+        <time>12-18</time>
+        <icon>TYPE_USER</icon>
+    </message>
+    <message> <!--元素  即 对象 -->
+        <title isOfficial="true">抖音小助手</title> <!--子元素   isOfficial是属性-->
+        <hashtag>抖出你的幸福</hashtag>
+        <time>前天</time>
+        <icon>TYPE_ROBOT</icon>
+    </message>
+    <message>
+        <title isOfficial="true">系统消息</title>
+        <hashtag>你中奖啦!</hashtag>
+        <time>12-28</time>
+        <icon>TYPE_SYSTEM</icon>
+    </message>
+    <message>
+        <title isOfficial="true">游戏小助手</title>
+        <hashtag>官方好游戏</hashtag>
+        <time>刚刚</time>
+        <icon>TYPE_GAME</icon>
+    </message>
+    <message>
+        <title isOfficial="false">陌生人消息</title>
+        <hashtag>转发[视频]</hashtag>
+        <time>12-12</time>
+        <icon>TYPE_STRANGER</icon>
+    </message>
+    <message>
+        <title isOfficial="false">张欣尧</title>
+        <hashtag>没错我就是抖音达人</hashtag>
+        <time>12-18</time>
+        <icon>TYPE_USER</icon>
+    </message>
+</messages>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--这里讲解gravity 、 layout_gravity-->
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#ccc"
+        android:gravity="right|bottom"
+        android:text="Vertical LinearLayout"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="New Button"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="New Button"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="New Button"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#9cc"
+        android:text="Horizontal LinearLayout"
+        android:textAllCaps="false"
+        android:textSize="32sp" />
+
+    <!--这里可以讲下 weight 当前剩余空间按权重平分 ,这个是LinearLayout的特点
+
+         假设总宽为L
+
+         實際寬度 = 控件原來的長度 + 剩餘空間所佔百分比的寬度 (L减去两个控件在xml写的layout_width宽度)
+
+         方案1：button1實際寬度 = 0 + 2(L-(0+0))/(2+1)= 2/3L     button2實際寬度 = 0 +1(L-(0+0))/(2+1) = 1/3L
+
+         方案2：button1實際寬度 = L + 2(L-(L+L))/(2+1)= 1/3L     button2實際寬度 = L +1(L-(L+L))/(2+1) = 2/3L
+
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Button1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Button2"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Button3"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button4"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</LinearLayout>

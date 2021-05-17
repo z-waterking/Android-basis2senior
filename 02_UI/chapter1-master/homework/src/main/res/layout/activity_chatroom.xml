@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#161823">
+        <TextView
+            android:id="@+id/tv_with_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="monospace"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            tools:text="消息" />
+    </RelativeLayout>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_above="@id/edit_send_content"-->
+        <!--android:layout_below="@id/header">-->
+
+        <!--<TextView-->
+            <!--android:padding="16dp"-->
+            <!--android:id="@+id/tv_content_info"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:fontFamily="casual"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="normal"-->
+            <!--tools:text="skdjskdjskdjskdjskdjs" />-->
+
+    <!--</ScrollView>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/im_list_item" />
+
+</LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/edit_send_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/ed_say"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#161823"
+            android:fadeScrollbars="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start|center_vertical"
+            android:hint="发送消息"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="4"
+            android:minHeight="36dp"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:textAlignment="viewStart"
+            android:textColor="#4cffffff"
+            android:textColorHint="#4cffffff"
+            android:textCursorDrawable="@drawable/im_edit_cursor"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/btn_send_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="start|center_vertical"
+            android:src="@drawable/selector_bg_send" />
+    </RelativeLayout>
+
+</RelativeLayout>
