@@ -1,3 +1,26 @@
+# 摘要
+
+此库为安卓从0-1搭建迷你抖音的教程。每个文件夹即为一个最小可运行单元，**并附带了gif表现最终效果**。
+
+**各文件夹中的README.md拎出了重点实现，供参考。**
+
+**目录如下：**
+
+|说明|文件夹|
+|:--|:--|
+|基础|01_Foundation|
+|安卓UI|02_UI|
+|动画|03_Animation|
+|网络|04_Network|
+|本地存储|05_Storage|
+|视频|06_Video|
+|相机|07_Camera|
+|人脸识别|08_FaceDetect|
+
+完成后，你可以复刻一个迷你版的抖音。
+
+完成版在个人库：[mini-tiktok](https://github.com/z-waterking/mini-tiktok)
+
 # 实现效果
 
 ## 01_Foundation
@@ -56,8 +79,9 @@
 
 * 加强版-添加Note
 
-![img](./05_Storage/pics/enhanced_homework_add_note.gif)
-    
+  ![img](./05_Storage/pics/enhanced_homework_add_note.gif)
+      
+
 * 加强版-更改完成状态及删除
 
 ![img](./05_Storage/pics/enhanced_homework_done_delete_note.gif)
